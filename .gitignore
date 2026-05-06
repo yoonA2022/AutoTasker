@@ -1,17 +1,4 @@
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-.env
-venv/
-env/
-dist/
-build/
-*.spec
-.idea/
-.vscode/
-*.db
-logs/
-storage/*.db
+node_modules/
+dist-electron/
+dist
 
