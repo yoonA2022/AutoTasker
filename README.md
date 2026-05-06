@@ -1,6 +1,6 @@
 # 🛠 AutoTasker
 
-这是一个基于 Electron + React + Vite + TypeScript 的桌面应用程序。
+这是一个基于 Electron + React + Vite + HeroUI + TypeScript 的桌面应用程序。
 
 ## 🧱 项目结构
 
