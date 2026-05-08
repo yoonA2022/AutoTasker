@@ -1,25 +1,32 @@
-import { Button } from "@heroui/react";
-import { Globe, Plus, Mail, Trash2 } from "lucide-react";
+import { useState } from "react";
+import { SidebarInset, SidebarProvider, useSidebar } from "@/components/ui/sidebar";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { AppSidebar } from "@/components/layout/sidebar/AppSidebar";
+import { MainContent } from "@/components/layout/content/MainContent";
+import { RightToolbar } from "@/components/layout/toolbar/RightToolbar";
 
-export function App() {
+function AppLayout({ activePage }: { activePage: string }) {
+    const { toggleSidebar: toggleLeft } = useSidebar();
     return (
-        <div className="flex flex-wrap gap-3">
-            <Button>
-                <Globe />
-                Search
-            </Button>
-            <Button variant="secondary">
-                <Plus />
-                Add Member
-            </Button>
-            <Button variant="tertiary">
-                <Mail />
-                Email
-            </Button>
-            <Button variant="danger">
-                <Trash2 />
-                Delete
-            </Button>
-        </div>
+        <SidebarInset>
+            <SidebarProvider defaultOpen={true} keyboardShortcut={false}>
+                <MainContent toggleLeftSidebar={toggleLeft} activePage={activePage} />
+                <RightToolbar />
+            </SidebarProvider>
+        </SidebarInset>
     );
 }
+
+function App() {
+    const [activePage, setActivePage] = useState("overview");
+    return (
+        <TooltipProvider>
+            <SidebarProvider>
+                <AppSidebar activePage={activePage} onNavigate={setActivePage} />
+                <AppLayout activePage={activePage} />
+            </SidebarProvider>
+        </TooltipProvider>
+    );
+}
+
+export default App;

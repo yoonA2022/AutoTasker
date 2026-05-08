@@ -1,4 +1,4 @@
-import { app, BrowserWindow, ipcMain } from 'electron';
+import { app, BrowserWindow, ipcMain, Menu } from 'electron';
 import path from 'path';
 
 const isDev: boolean = process.env.NODE_ENV === 'development';
@@ -7,7 +7,7 @@ function createWindow(): BrowserWindow {
     const win = new BrowserWindow({
         width: 1200,
         height: 800,
-        minWidth: 800,
+        minWidth: 1200,
         minHeight: 600,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
@@ -32,6 +32,7 @@ function createWindow(): BrowserWindow {
 }
 
 app.whenReady().then(() => {
+    Menu.setApplicationMenu(null);
     createWindow();
 
     app.on('activate', () => {
