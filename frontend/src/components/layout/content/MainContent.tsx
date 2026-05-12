@@ -3,10 +3,10 @@ import { useSidebar } from "@/components/ui/sidebar";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { PanelLeftIcon, PanelRightIcon } from "lucide-react";
-import { OverviewPage } from "@/pages/OverviewPage/OverviewPage";
-import { BoxPage } from "@/pages/BoxPage/BoxPage";
-import { SearchPage } from "@/pages/SearchPage";
-import { SettingsPage } from "@/pages/SettingsPage";
+import { OverviewPage } from "@/components/layout/content/pages/OverviewPage/OverviewPage";
+import { BoxPage } from "@/components/layout/content/pages/BoxPage/BoxPage";
+import { SearchPage } from "@/components/layout/content/pages/SearchPage";
+import { SettingsPage } from "@/components/layout/content/pages/SettingsPage";
 
 const pages: Record<string, React.ComponentType> = {
     overview: OverviewPage,
