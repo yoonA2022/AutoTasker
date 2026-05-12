@@ -4,11 +4,13 @@ import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { PanelLeftIcon, PanelRightIcon } from "lucide-react";
 import { OverviewPage } from "@/pages/OverviewPage/OverviewPage";
+import { BoxPage } from "@/pages/BoxPage/BoxPage";
 import { SearchPage } from "@/pages/SearchPage";
 import { SettingsPage } from "@/pages/SettingsPage";
 
 const pages: Record<string, React.ComponentType> = {
     overview: OverviewPage,
+    toolbox: BoxPage,
     search: SearchPage,
     settings: SettingsPage,
 };

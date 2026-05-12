@@ -1,3 +1,4 @@
+// 欢迎卡片
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Mail, Phone, MapPin } from "lucide-react";
@@ -27,7 +28,7 @@ export function WelcomeCard() {
                         </p>
                     </div>
                 </div>
-                <div className="flex gap-6 text-sm text-white/80">
+                <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/80">
                     <div className="flex items-center gap-1.5">
                         <Mail className="size-3.5" />
                         <span>jason@auznn.com</span>

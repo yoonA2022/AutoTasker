@@ -14,11 +14,13 @@ import {
     Search,
     Settings,
     LayoutDashboard,
+    Box,
 } from "lucide-react";
 import appLogo from "@/assets/icons/app.png";
 
 const items = [
     { id: "overview", title: "概览", icon: LayoutDashboard },
+    { id: "toolbox", title: "工具箱", icon: Box },
     { id: "search", title: "搜索", icon: Search },
     { id: "settings", title: "设置", icon: Settings },
 ];
