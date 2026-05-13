@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { Settings2 } from "lucide-react";
 import { MyTools } from "./components/MyTools";
+import { NeedHelp } from "./components/NeedHelp";
 
 export function RightToolbar() {
     return (
@@ -25,6 +26,7 @@ export function RightToolbar() {
             </SidebarHeader>
             <SidebarContent>
                 <MyTools />
+                <NeedHelp />
             </SidebarContent>
         </Sidebar>
     );
